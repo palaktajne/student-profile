@@ -1,0 +1,707 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABC College - Tailwind Classes</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        college: "#4f46e5"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-gray-800">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="bg-indigo-700 text-white shadow-lg">
+
+        <div class="max-w-6xl mx-auto
+                    px-4 sm:px-6 lg:px-8
+                    py-4 flex justify-between
+                    items-center">
+
+            <h1 class="text-xl font-bold">
+                🎓 ABC College
+            </h1>
+
+            <div class="hidden md:flex gap-6">
+
+                <a href="#home"
+                   class="hover:text-indigo-200">
+                    Home
+                </a>
+
+                <a href="#classes"
+                   class="hover:text-indigo-200">
+                    Classes
+                </a>
+
+                <a href="#example"
+                   class="hover:text-indigo-200">
+                    Example
+                </a>
+
+            </div>
+
+            <button id="menuBtn"
+                    class="md:hidden text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div id="mobileMenu"
+             class="hidden md:hidden px-6 pb-4">
+
+            <a href="#home"
+               class="block py-2">
+                Home
+            </a>
+
+            <a href="#classes"
+               class="block py-2">
+                Classes
+            </a>
+
+            <a href="#example"
+               class="block py-2">
+                Example
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home"
+             class="bg-gradient-to-r
+                    from-indigo-700
+                    to-purple-700
+                    text-white">
+
+        <div class="max-w-6xl mx-auto
+                    px-4 sm:px-6
+                    py-16 sm:py-20
+                    text-center">
+
+            <p class="text-indigo-200
+                      font-bold
+                      uppercase
+                      tracking-widest
+                      mb-4">
+
+                Tailwind CSS Practical
+
+            </p>
+
+            <h2 class="text-4xl
+                       sm:text-5xl
+                       font-bold
+                       mb-5">
+
+                ABC College
+
+            </h2>
+
+            <p class="text-lg
+                      text-indigo-100
+                      max-w-2xl
+                      mx-auto">
+
+                Understanding basic Tailwind CSS
+                utility classes through a college
+                website example.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section id="classes"
+             class="max-w-6xl mx-auto
+                    px-4 sm:px-6
+                    py-14 sm:py-16">
+
+        <div class="text-center mb-10">
+
+            <span class="text-indigo-600
+                         font-bold
+                         uppercase
+                         tracking-wider">
+
+                Tailwind Utilities
+
+            </span>
+
+            <h2 class="text-3xl
+                       sm:text-4xl
+                       font-bold
+                       mt-3">
+
+                Four Important Classes
+
+            </h2>
+
+            <p class="text-gray-600
+                      max-w-2xl
+                      mx-auto
+                      mt-4">
+
+                These classes control the alignment,
+                size, weight and spacing of elements.
+
+            </p>
+
+        </div>
+
+
+        <!-- ================= CLASS CARDS ================= -->
+
+        <div class="grid grid-cols-1
+                    sm:grid-cols-2
+                    lg:grid-cols-4
+                    gap-6">
+
+
+            <!-- text-center -->
+
+            <div class="bg-white
+                        rounded-2xl
+                        shadow-md
+                        p-6
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            mx-auto
+                            bg-indigo-100
+                            rounded-xl
+                            flex items-center
+                            justify-center
+                            text-2xl">
+
+                    ↔️
+
+                </div>
+
+                <h3 class="text-xl
+                           font-bold
+                           text-center
+                           text-indigo-700
+                           mt-5">
+
+                    text-center
+
+                </h3>
+
+                <p class="text-gray-600
+                          text-center
+                          mt-3">
+
+                    Aligns the text to the
+                    center of the element.
+
+                </p>
+
+            </div>
+
+
+            <!-- text-xl -->
+
+            <div class="bg-white
+                        rounded-2xl
+                        shadow-md
+                        p-6
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            mx-auto
+                            bg-purple-100
+                            rounded-xl
+                            flex items-center
+                            justify-center
+                            text-2xl">
+
+                    🔠
+
+                </div>
+
+                <h3 class="text-xl
+                           font-bold
+                           text-center
+                           text-purple-700
+                           mt-5">
+
+                    text-xl
+
+                </h3>
+
+                <p class="text-gray-600
+                          text-center
+                          mt-3">
+
+                    Increases the text size
+                    to the Tailwind XL size.
+
+                </p>
+
+            </div>
+
+
+            <!-- font-bold -->
+
+            <div class="bg-white
+                        rounded-2xl
+                        shadow-md
+                        p-6
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            mx-auto
+                            bg-blue-100
+                            rounded-xl
+                            flex items-center
+                            justify-center
+                            text-2xl">
+
+                    B
+
+                </div>
+
+                <h3 class="text-xl
+                           font-bold
+                           text-center
+                           text-blue-700
+                           mt-5">
+
+                    font-bold
+
+                </h3>
+
+                <p class="text-gray-600
+                          text-center
+                          mt-3">
+
+                    Makes the text bold by
+                    increasing its font weight.
+
+                </p>
+
+            </div>
+
+
+            <!-- p-4 -->
+
+            <div class="bg-white
+                        rounded-2xl
+                        shadow-md
+                        p-6
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            mx-auto
+                            bg-green-100
+                            rounded-xl
+                            flex items-center
+                            justify-center
+                            text-2xl">
+
+                    ↔
+
+                </div>
+
+                <h3 class="text-xl
+                           font-bold
+                           text-center
+                           text-green-700
+                           mt-5">
+
+                    p-4
+
+                </h3>
+
+                <p class="text-gray-600
+                          text-center
+                          mt-3">
+
+                    Adds 1rem (16px) of
+                    padding on all sides.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRACTICAL EXAMPLE ================= -->
+
+    <section id="example"
+             class="bg-slate-100
+                    py-14 sm:py-20">
+
+        <div class="max-w-6xl mx-auto
+                    px-4 sm:px-6">
+
+            <div class="text-center mb-10">
+
+                <span class="text-indigo-600
+                             font-bold uppercase">
+
+                    Practical Example
+
+                </span>
+
+                <h2 class="text-3xl
+                           sm:text-4xl
+                           font-bold mt-3">
+
+                    College Notice Card
+
+                </h2>
+
+                <p class="text-gray-600 mt-4">
+
+                    All four Tailwind classes are
+                    demonstrated in this notice.
+
+                </p>
+
+            </div>
+
+
+            <!-- Notice Card -->
+
+            <div class="max-w-2xl
+                        mx-auto
+                        bg-white
+                        rounded-2xl
+                        shadow-xl
+                        overflow-hidden">
+
+                <!-- Notice Header -->
+
+                <div class="bg-indigo-700
+                            text-white
+                            p-4
+                            text-center">
+
+                    <h3 class="text-xl font-bold">
+
+                        📢 College Notice
+
+                    </h3>
+
+                </div>
+
+
+                <!-- Notice Content -->
+
+                <div class="p-4 sm:p-6">
+
+                    <h4 class="text-xl
+                               font-bold
+                               text-center
+                               text-indigo-700
+                               mb-4">
+
+                        Admission Open 2026
+
+                    </h4>
+
+                    <p class="text-gray-600
+                              text-center
+                              leading-relaxed">
+
+                        ABC College has started admissions
+                        for the academic year 2026.
+                        Students can apply for various
+                        undergraduate and postgraduate
+                        programs.
+
+                    </p>
+
+
+                    <div class="mt-6
+                                bg-indigo-50
+                                rounded-xl
+                                p-4">
+
+                        <p class="font-bold
+                                  text-indigo-800
+                                  text-center">
+
+                            Important Date
+
+                        </p>
+
+                        <p class="text-center
+                                  text-gray-600
+                                  mt-2">
+
+                            Last date to apply:
+                            30 November 2026
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="text-center mt-6">
+
+                        <button onclick="applyNow()"
+                                class="bg-indigo-600
+                                       text-white
+                                       px-6 py-3
+                                       rounded-xl
+                                       font-bold
+                                       hover:bg-indigo-700
+                                       transition">
+
+                            Apply Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CLASS EXPLANATION ================= -->
+
+    <section class="max-w-5xl mx-auto
+                    px-4 sm:px-6
+                    py-14 sm:py-20">
+
+        <h2 class="text-3xl
+                   sm:text-4xl
+                   font-bold
+                   text-center
+                   mb-10">
+
+            Class Explanation
+
+        </h2>
+
+
+        <div class="overflow-x-auto
+                    rounded-2xl
+                    shadow-lg">
+
+            <table class="w-full
+                          bg-white
+                          text-left">
+
+                <thead class="bg-indigo-700
+                              text-white">
+
+                    <tr>
+
+                        <th class="p-4">
+                            Class
+                        </th>
+
+                        <th class="p-4">
+                            Purpose
+                        </th>
+
+                        <th class="p-4">
+                            College Website Use
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr class="border-b">
+
+                        <td class="p-4">
+                            <code class="font-bold">
+                                text-center
+                            </code>
+                        </td>
+
+                        <td class="p-4">
+                            Centers the text.
+                        </td>
+
+                        <td class="p-4">
+                            Centering the college notice.
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="border-b bg-slate-50">
+
+                        <td class="p-4">
+                            <code class="font-bold">
+                                text-xl
+                            </code>
+                        </td>
+
+                        <td class="p-4">
+                            Makes text larger.
+                        </td>
+
+                        <td class="p-4">
+                            Notice and section headings.
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="border-b">
+
+                        <td class="p-4">
+                            <code class="font-bold">
+                                font-bold
+                            </code>
+                        </td>
+
+                        <td class="p-4">
+                            Makes text bold.
+                        </td>
+
+                        <td class="p-4">
+                            College name and important dates.
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="bg-slate-50">
+
+                        <td class="p-4">
+                            <code class="font-bold">
+                                p-4
+                            </code>
+                        </td>
+
+                        <td class="p-4">
+                            Adds 16px padding.
+                        </td>
+
+                        <td class="p-4">
+                            Adds space inside notice cards.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-slate-950
+                   text-white
+                   text-center
+                   py-7">
+
+        <h3 class="text-xl font-bold">
+            🎓 ABC College
+        </h3>
+
+        <p class="text-gray-400 mt-2">
+            Tailwind CSS Practical
+        </p>
+
+        <p class="text-gray-500 text-sm mt-2">
+            © 2026 ABC College
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Mobile menu
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+        // Apply button
+
+        function applyNow() {
+
+            alert(
+                "Thank you for your interest in ABC College! Admission applications are now open."
+            );
+
+        }
+
+
+        // Close mobile menu after clicking a link
+
+        document.querySelectorAll("#mobileMenu a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    mobileMenu.classList.add("hidden");
+
+                });
+
+            });
+
+    </script>
+
+</body>
+</html>
+```
