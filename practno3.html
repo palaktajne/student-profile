@@ -1,0 +1,319 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission & Courses</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        college: "#4f46e5"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-indigo-700 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+                🎓 ABC College
+            </h1>
+
+            <div class="hidden md:flex gap-6">
+                <a href="#home" class="hover:text-indigo-200">Home</a>
+                <a href="#courses" class="hover:text-indigo-200">Courses</a>
+                <a href="#admission" class="hover:text-indigo-200">Admission</a>
+                <a href="#facilities" class="hover:text-indigo-200">Facilities</a>
+            </div>
+
+            <button id="menuBtn" class="md:hidden text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#courses" class="block py-2">Courses</a>
+            <a href="#admission" class="block py-2">Admission</a>
+            <a href="#facilities" class="block py-2">Facilities</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+
+            <p class="uppercase tracking-widest text-indigo-200 font-semibold mb-3">
+                Welcome to
+            </p>
+
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                ABC College
+            </h2>
+
+            <p class="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto mb-8">
+                Empowering students with knowledge, skills and opportunities
+                for a successful future.
+            </p>
+
+            <button onclick="showMessage()"
+                class="bg-white text-indigo-700 px-7 py-3 rounded-full
+                       font-semibold hover:bg-indigo-100 transition">
+                Explore College
+            </button>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="max-w-6xl mx-auto px-6 py-16">
+
+        <div class="text-center mb-10">
+            <span class="text-indigo-600 font-semibold">ACADEMICS</span>
+            <h2 class="text-3xl font-bold mt-2">
+                Popular Courses
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white p-7 rounded-2xl shadow-md
+                        hover:shadow-xl transition">
+                <div class="text-4xl mb-4">💻</div>
+                <h3 class="text-xl font-bold mb-2">
+                    Computer Science
+                </h3>
+                <p class="text-gray-600">
+                    Learn programming, web development, databases,
+                    artificial intelligence and software development.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-md
+                        hover:shadow-xl transition">
+                <div class="text-4xl mb-4">📊</div>
+                <h3 class="text-xl font-bold mb-2">
+                    Data Science
+                </h3>
+                <p class="text-gray-600">
+                    Explore data analysis, machine learning,
+                    statistics and visualization.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-md
+                        hover:shadow-xl transition">
+                <div class="text-4xl mb-4">⚙️</div>
+                <h3 class="text-xl font-bold mb-2">
+                    Engineering
+                </h3>
+                <p class="text-gray-600">
+                    Develop technical knowledge and practical
+                    engineering skills.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Ordered List -->
+    <section id="admission" class="bg-white py-16">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="text-center mb-10">
+                <span class="text-indigo-600 font-semibold">
+                    ADMISSIONS
+                </span>
+
+                <h2 class="text-3xl font-bold mt-2">
+                    Admission Procedure
+                </h2>
+
+                <p class="text-gray-600 mt-3">
+                    An ordered list is suitable because these steps
+                    should be completed in sequence.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-indigo-50 p-8 rounded-2xl">
+
+                <!-- ORDERED LIST -->
+                <ol class="list-decimal list-inside space-y-5
+                           text-lg text-gray-700">
+
+                    <li class="font-medium">
+                        Check the eligibility requirements.
+                    </li>
+
+                    <li class="font-medium">
+                        Complete the online admission application.
+                    </li>
+
+                    <li class="font-medium">
+                        Upload the required documents.
+                    </li>
+
+                    <li class="font-medium">
+                        Pay the application fee.
+                    </li>
+
+                    <li class="font-medium">
+                        Attend the counselling/document verification.
+                    </li>
+
+                    <li class="font-medium">
+                        Confirm your admission and pay the required fees.
+                    </li>
+
+                </ol>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Unordered List -->
+    <section id="facilities" class="max-w-6xl mx-auto px-6 py-16">
+
+        <div class="text-center mb-10">
+            <span class="text-indigo-600 font-semibold">
+                CAMPUS LIFE
+            </span>
+
+            <h2 class="text-3xl font-bold mt-2">
+                College Facilities
+            </h2>
+
+            <p class="text-gray-600 mt-3">
+                An unordered list is suitable because these facilities
+                do not need to be used in a particular order.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-8">
+
+            <!-- UNORDERED LIST -->
+            <ul class="list-disc list-inside space-y-4
+                       text-lg text-gray-700">
+
+                <li>Modern Computer Laboratories</li>
+                <li>Central Library</li>
+                <li>High-Speed Wi-Fi Campus</li>
+                <li>Sports and Fitness Facilities</li>
+                <li>Separate Hostel Facilities</li>
+                <li>Smart Classrooms</li>
+                <li>Cafeteria and Student Lounge</li>
+                <li>Career and Placement Cell</li>
+
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="bg-slate-900 text-white py-16">
+
+        <div class="max-w-5xl mx-auto px-6">
+
+            <h2 class="text-3xl font-bold text-center mb-10">
+                Ordered vs Unordered Lists
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Ordered -->
+                <div class="border border-indigo-400 rounded-2xl p-7">
+
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-300">
+                        &lt;ol&gt; Ordered List
+                    </h3>
+
+                    <p class="text-gray-300 mb-5">
+                        Used when the sequence or order of items is
+                        important.
+                    </p>
+
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Apply Online</li>
+                        <li>Upload Documents</li>
+                        <li>Verification</li>
+                        <li>Admission Confirmation</li>
+                    </ol>
+
+                </div>
+
+                <!-- Unordered -->
+                <div class="border border-purple-400 rounded-2xl p-7">
+
+                    <h3 class="text-2xl font-bold mb-4 text-purple-300">
+                        &lt;ul&gt; Unordered List
+                    </h3>
+
+                    <p class="text-gray-300 mb-5">
+                        Used when the order of items is not important.
+                    </p>
+
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Library</li>
+                        <li>Hostel</li>
+                        <li>Sports Ground</li>
+                        <li>Computer Labs</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-700 text-white text-center py-6">
+
+        <p class="font-semibold">
+            © 2026 ABC College
+        </p>
+
+        <p class="text-indigo-200 text-sm mt-1">
+            Excellence • Innovation • Education
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        // Mobile menu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+
+        // Button message
+        function showMessage() {
+            alert(
+                "Welcome to ABC College! Explore our courses, admission procedure and campus facilities."
+            );
+        }
+
+    </script>
+
+</body>
+</html>
+```
