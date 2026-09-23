@@ -1,0 +1,698 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABC College - Tailwind CSS</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        college: "#4f46e5"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Traditional CSS -->
+    <style>
+
+        /* Traditional CSS example */
+        .college-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+            border-left: 5px solid #4f46e5;
+            transition: 0.3s;
+        }
+
+        .college-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .college-info h3 {
+            color: #312e81;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .college-info p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+    </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto px-6 py-4
+                    flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold">
+                🎓 ABC College
+            </h1>
+
+            <div class="hidden md:flex gap-7">
+                <a href="#home"
+                   class="hover:text-indigo-200 transition">
+                    Home
+                </a>
+
+                <a href="#tailwind"
+                   class="hover:text-indigo-200 transition">
+                    Tailwind
+                </a>
+
+                <a href="#traditional"
+                   class="hover:text-indigo-200 transition">
+                    Traditional CSS
+                </a>
+
+                <a href="#comparison"
+                   class="hover:text-indigo-200 transition">
+                    Comparison
+                </a>
+            </div>
+
+            <button id="menuBtn"
+                    class="md:hidden text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+             class="hidden md:hidden px-6 pb-4">
+
+            <a href="#home" class="block py-2">
+                Home
+            </a>
+
+            <a href="#tailwind" class="block py-2">
+                Tailwind
+            </a>
+
+            <a href="#traditional" class="block py-2">
+                Traditional CSS
+            </a>
+
+            <a href="#comparison" class="block py-2">
+                Comparison
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section id="home"
+             class="bg-gradient-to-r from-indigo-700
+                    via-purple-700 to-indigo-900
+                    text-white">
+
+        <div class="max-w-6xl mx-auto px-6 py-20
+                    text-center">
+
+            <p class="uppercase tracking-[0.3em]
+                      text-indigo-200 font-semibold mb-4">
+                Web Development Practical
+            </p>
+
+            <h2 class="text-4xl md:text-6xl
+                       font-extrabold mb-6">
+                Tailwind CSS at ABC College
+            </h2>
+
+            <p class="max-w-2xl mx-auto
+                      text-lg md:text-xl
+                      text-indigo-100 mb-8">
+
+                Understanding the utility-first approach
+                and how it differs from traditional CSS.
+
+            </p>
+
+            <button onclick="showWelcome()"
+                    class="bg-white text-indigo-700
+                           px-8 py-3 rounded-full
+                           font-bold shadow-lg
+                           hover:bg-indigo-100
+                           hover:scale-105
+                           transition">
+
+                Explore College
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+
+        <div class="text-center mb-12">
+
+            <span class="text-indigo-600
+                         font-bold uppercase tracking-wider">
+                Understanding CSS
+            </span>
+
+            <h2 class="text-3xl md:text-4xl
+                       font-bold mt-3">
+
+                Utility-First Approach
+
+            </h2>
+
+            <p class="max-w-3xl mx-auto
+                      text-gray-600 mt-4">
+
+                Tailwind CSS provides small reusable utility classes
+                that can be combined directly in HTML to create
+                a complete design.
+
+            </p>
+
+        </div>
+
+
+        <!-- Tailwind Example -->
+        <div id="tailwind"
+             class="bg-white rounded-3xl
+                    shadow-xl p-8 md:p-10
+                    border border-indigo-100">
+
+            <div class="flex items-center gap-4 mb-6">
+
+                <div class="w-14 h-14
+                            bg-indigo-600
+                            text-white rounded-2xl
+                            flex items-center justify-center
+                            text-2xl">
+
+                    ⚡
+
+                </div>
+
+                <div>
+
+                    <h3 class="text-2xl font-bold">
+                        Tailwind CSS Example
+                    </h3>
+
+                    <p class="text-gray-500">
+                        Utility-first styling
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tailwind styled card -->
+            <div class="bg-indigo-50
+                        border border-indigo-200
+                        rounded-2xl p-6
+                        hover:shadow-lg
+                        transition">
+
+                <h4 class="text-xl font-bold
+                           text-indigo-800 mb-3">
+
+                    📢 Admission Notice
+
+                </h4>
+
+                <p class="text-gray-600 mb-5">
+
+                    Admissions are now open for
+                    Computer Science, Data Science
+                    and Engineering programs.
+
+                </p>
+
+                <button onclick="admissionMessage()"
+                        class="bg-indigo-600
+                               text-white px-6 py-3
+                               rounded-lg font-semibold
+                               hover:bg-indigo-700
+                               transition">
+
+                    Apply Now
+
+                </button>
+
+            </div>
+
+
+            <div class="mt-6 bg-slate-900
+                        text-green-400 rounded-xl
+                        p-5 overflow-x-auto">
+
+                <code>
+                    &lt;div class="bg-indigo-50
+                    border border-indigo-200
+                    rounded-2xl p-6
+                    hover:shadow-lg"&gt;
+                </code>
+
+            </div>
+
+            <p class="text-gray-600 mt-4">
+
+                Here, the design is created directly using
+                Tailwind utility classes. No separate CSS rule
+                is required for this card.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRADITIONAL CSS -->
+    <section id="traditional"
+             class="bg-slate-100 py-16">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="text-center mb-12">
+
+                <span class="text-purple-600
+                             font-bold uppercase">
+                    Traditional Method
+                </span>
+
+                <h2 class="text-3xl md:text-4xl
+                           font-bold mt-3">
+
+                    Traditional CSS Example
+
+                </h2>
+
+                <p class="text-gray-600
+                          max-w-2xl mx-auto mt-4">
+
+                    In traditional CSS, a custom class is
+                    created and the styling rules are written
+                    separately.
+
+                </p>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-2
+                        gap-8 items-center">
+
+                <!-- Traditional CSS card -->
+                <div class="college-info">
+
+                    <h3>
+                        🏫 About ABC College
+                    </h3>
+
+                    <p>
+
+                        ABC College provides quality education
+                        with modern laboratories, experienced
+                        faculty, digital classrooms and
+                        industry-oriented courses.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Explanation -->
+                <div>
+
+                    <h3 class="text-2xl font-bold
+                               text-slate-800 mb-4">
+
+                        How Traditional CSS Works
+
+                    </h3>
+
+                    <p class="text-gray-600 mb-5">
+
+                        A developer first creates a class such as
+                        <strong>.college-info</strong> and then
+                        defines its background, padding, border,
+                        shadow and other properties in CSS.
+
+                    </p>
+
+                    <div class="bg-slate-900
+                                text-green-400
+                                rounded-xl p-5">
+
+                        <code>
+                            .college-info {<br>
+                            &nbsp;&nbsp;background: white;<br>
+                            &nbsp;&nbsp;padding: 30px;<br>
+                            &nbsp;&nbsp;border-radius: 16px;<br>
+                            &nbsp;&nbsp;box-shadow: ...;<br>
+                            }
+                        </code>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPARISON -->
+    <section id="comparison"
+             class="max-w-6xl mx-auto px-6 py-16">
+
+        <div class="text-center mb-12">
+
+            <span class="text-indigo-600
+                         font-bold uppercase">
+                Comparison
+            </span>
+
+            <h2 class="text-3xl md:text-4xl
+                       font-bold mt-3">
+
+                Tailwind CSS vs Traditional CSS
+
+            </h2>
+
+        </div>
+
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full bg-white
+                          rounded-2xl shadow-lg
+                          overflow-hidden">
+
+                <thead class="bg-indigo-700
+                              text-white">
+
+                    <tr>
+
+                        <th class="p-5 text-left">
+                            Feature
+                        </th>
+
+                        <th class="p-5 text-left">
+                            Tailwind CSS
+                        </th>
+
+                        <th class="p-5 text-left">
+                            Traditional CSS
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b">
+
+                        <td class="p-5 font-bold">
+                            Approach
+                        </td>
+
+                        <td class="p-5">
+                            Utility-first
+                        </td>
+
+                        <td class="p-5">
+                            Rule-based
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b bg-slate-50">
+
+                        <td class="p-5 font-bold">
+                            Styling
+                        </td>
+
+                        <td class="p-5">
+                            Classes are added directly
+                            to HTML elements.
+                        </td>
+
+                        <td class="p-5">
+                            Custom selectors and
+                            properties are written in CSS.
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b">
+
+                        <td class="p-5 font-bold">
+                            Reusability
+                        </td>
+
+                        <td class="p-5">
+                            Utilities can be combined
+                            and reused.
+                        </td>
+
+                        <td class="p-5">
+                            Custom classes can be reused.
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b bg-slate-50">
+
+                        <td class="p-5 font-bold">
+                            Example
+                        </td>
+
+                        <td class="p-5">
+                            <code>
+                                p-6 rounded-xl shadow-lg
+                            </code>
+                        </td>
+
+                        <td class="p-5">
+                            <code>
+                                .card { padding: 24px; }
+                            </code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-5 font-bold">
+                            College Website Use
+                        </td>
+
+                        <td class="p-5">
+                            Admission notice card
+                        </td>
+
+                        <td class="p-5">
+                            College information card
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADVANTAGES -->
+    <section class="bg-indigo-900
+                    text-white py-16">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-3xl font-bold
+                       text-center mb-10">
+
+                Benefits of Utility-First CSS
+
+            </h2>
+
+
+            <div class="grid sm:grid-cols-2
+                        lg:grid-cols-4 gap-6">
+
+                <div class="bg-white/10
+                            backdrop-blur
+                            rounded-2xl p-6">
+
+                    <div class="text-3xl mb-4">
+                        ⚡
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-2">
+                        Fast Development
+                    </h3>
+
+                    <p class="text-indigo-200">
+                        Build interfaces quickly using
+                        ready-made utility classes.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white/10
+                            backdrop-blur
+                            rounded-2xl p-6">
+
+                    <div class="text-3xl mb-4">
+                        📱
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-2">
+                        Responsive
+                    </h3>
+
+                    <p class="text-indigo-200">
+                        Responsive classes make layouts
+                        suitable for different screens.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white/10
+                            backdrop-blur
+                            rounded-2xl p-6">
+
+                    <div class="text-3xl mb-4">
+                        🎨
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-2">
+                        Consistent Design
+                    </h3>
+
+                    <p class="text-indigo-200">
+                        Standard utility classes help maintain
+                        consistent spacing and styling.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white/10
+                            backdrop-blur
+                            rounded-2xl p-6">
+
+                    <div class="text-3xl mb-4">
+                        🧩
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-2">
+                        Easy Customization
+                    </h3>
+
+                    <p class="text-indigo-200">
+                        Utilities can be combined to create
+                        different components.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950
+                   text-white text-center py-7">
+
+        <h3 class="font-bold text-lg">
+            🎓 ABC College
+        </h3>
+
+        <p class="text-gray-400 text-sm mt-2">
+            Web Development Practical • Tailwind CSS
+        </p>
+
+        <p class="text-gray-500 text-xs mt-2">
+            © 2026 ABC College. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Mobile menu
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+        // Welcome button
+        function showWelcome() {
+
+            alert(
+                "Welcome to ABC College! Explore our Tailwind CSS practical."
+            );
+
+        }
+
+
+        // Admission button
+        function admissionMessage() {
+
+            alert(
+                "Admission applications are open. Please contact the college admission office for details."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
