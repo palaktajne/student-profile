@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Responsive Paragraph</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
+
+        <h1 class="text-2xl font-bold text-blue-600 mb-4">
+            Responsive Text Example
+        </h1>
+
+        <!--
+            text-base -> normal text on small screens
+            md:text-xl -> larger text on medium and larger screens
+        -->
+        <p id="message"
+           class="text-base md:text-xl text-gray-700 mb-5">
+            Tailwind CSS makes web pages responsive and easy to design.
+        </p>
+
+        <!-- JavaScript Button -->
+        <button onclick="changeMessage()"
+                class="bg-blue-500 text-white px-5 py-2 rounded
+                       hover:bg-blue-700">
+            Change Message
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function changeMessage() {
+
+            document.getElementById("message").textContent =
+                "This paragraph changes using JavaScript!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```

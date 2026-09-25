@@ -1,0 +1,422 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Responsive Heading</title>
+</head>
+
+<body class="bg-slate-950 text-white">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="bg-slate-900 border-b border-slate-700">
+
+        <div class="max-w-7xl mx-auto px-6 py-4
+                    flex justify-between items-center">
+
+            <!-- Logo -->
+
+            <h2 class="text-xl md:text-2xl font-bold">
+                Edu<span class="text-blue-400">Tech</span>
+            </h2>
+
+
+            <!-- Desktop Menu -->
+
+            <div class="hidden md:flex gap-8 text-gray-300">
+
+                <a href="#" class="hover:text-blue-400 transition">
+                    Home
+                </a>
+
+                <a href="#" class="hover:text-blue-400 transition">
+                    Courses
+                </a>
+
+                <a href="#" class="hover:text-blue-400 transition">
+                    About
+                </a>
+
+                <a href="#" class="hover:text-blue-400 transition">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                onclick="toggleMenu()"
+                class="md:hidden text-2xl">
+
+                ☰
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div id="mobileMenu"
+             class="hidden md:hidden px-6 pb-5">
+
+            <a href="#"
+               class="block py-2 text-gray-300
+                      hover:text-blue-400">
+                Home
+            </a>
+
+            <a href="#"
+               class="block py-2 text-gray-300
+                      hover:text-blue-400">
+                Courses
+            </a>
+
+            <a href="#"
+               class="block py-2 text-gray-300
+                      hover:text-blue-400">
+                About
+            </a>
+
+            <a href="#"
+               class="block py-2 text-gray-300
+                      hover:text-blue-400">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section
+        class="min-h-[80vh] flex items-center
+               bg-gradient-to-br from-slate-950
+               via-blue-950 to-slate-900">
+
+        <div class="max-w-7xl mx-auto px-6 py-16
+                    text-center w-full">
+
+
+            <!-- Small Label -->
+
+            <span
+                class="inline-block bg-blue-500/10
+                       text-blue-400 border border-blue-500/30
+                       px-4 py-2 rounded-full
+                       text-sm mb-6">
+
+                Learn • Build • Grow
+
+            </span>
+
+
+            <!-- ================= MAIN HEADING ================= -->
+
+            <!--
+                text-3xl = smaller heading on mobile
+
+                md:text-6xl = larger heading on
+                medium and larger screens
+            -->
+
+            <h1
+                id="mainHeading"
+                class="text-3xl md:text-6xl
+                       font-extrabold
+                       leading-tight
+                       tracking-tight
+                       mb-6">
+
+                Learn Programming
+                <span class="text-blue-400">
+                    The Smart Way
+                </span>
+
+            </h1>
+
+
+            <!-- Paragraph -->
+
+            <p
+                class="text-base md:text-xl
+                       text-gray-400
+                       max-w-2xl mx-auto
+                       leading-relaxed mb-8">
+
+                Improve your programming skills with
+                practical projects, simple explanations,
+                and modern development techniques.
+
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div
+                class="flex flex-col sm:flex-row
+                       justify-center gap-4">
+
+                <button
+                    onclick="startLearning()"
+                    class="bg-blue-500
+                           hover:bg-blue-600
+                           text-white
+                           px-7 py-3
+                           rounded-lg
+                           font-semibold
+                           transition
+                           transform hover:scale-105">
+
+                    Start Learning
+
+                </button>
+
+
+                <button
+                    onclick="showMessage()"
+                    class="border border-gray-600
+                           hover:border-blue-400
+                           text-gray-200
+                           px-7 py-3
+                           rounded-lg
+                           font-semibold
+                           transition">
+
+                    Explore Courses
+
+                </button>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <p
+                id="message"
+                class="mt-6 text-green-400 font-medium">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="bg-slate-900 py-16">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2
+                class="text-2xl md:text-4xl
+                       font-bold text-center mb-12">
+
+                Why Choose Us?
+
+            </h2>
+
+
+            <!-- Cards -->
+
+            <div
+                class="grid grid-cols-1
+                       md:grid-cols-3
+                       gap-6">
+
+
+                <!-- Card 1 -->
+
+                <div
+                    class="bg-slate-800
+                           border border-slate-700
+                           p-6 rounded-2xl
+                           hover:-translate-y-2
+                           hover:border-blue-500
+                           transition duration-300">
+
+                    <div
+                        class="w-12 h-12
+                               bg-blue-500/20
+                               text-blue-400
+                               rounded-xl
+                               flex items-center
+                               justify-center
+                               text-2xl mb-5">
+
+                        💻
+
+                    </div>
+
+                    <h3
+                        class="text-xl font-bold mb-3">
+
+                        Practical Learning
+
+                    </h3>
+
+                    <p class="text-gray-400">
+
+                        Learn programming by creating
+                        real-world projects and applications.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Card 2 -->
+
+                <div
+                    class="bg-slate-800
+                           border border-slate-700
+                           p-6 rounded-2xl
+                           hover:-translate-y-2
+                           hover:border-blue-500
+                           transition duration-300">
+
+                    <div
+                        class="w-12 h-12
+                               bg-purple-500/20
+                               text-purple-400
+                               rounded-xl
+                               flex items-center
+                               justify-center
+                               text-2xl mb-5">
+
+                        🚀
+
+                    </div>
+
+                    <h3
+                        class="text-xl font-bold mb-3">
+
+                        Build Projects
+
+                    </h3>
+
+                    <p class="text-gray-400">
+
+                        Apply your knowledge by building
+                        useful and interesting projects.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Card 3 -->
+
+                <div
+                    class="bg-slate-800
+                           border border-slate-700
+                           p-6 rounded-2xl
+                           hover:-translate-y-2
+                           hover:border-blue-500
+                           transition duration-300">
+
+                    <div
+                        class="w-12 h-12
+                               bg-green-500/20
+                               text-green-400
+                               rounded-xl
+                               flex items-center
+                               justify-center
+                               text-2xl mb-5">
+
+                        🎯
+
+                    </div>
+
+                    <h3
+                        class="text-xl font-bold mb-3">
+
+                        Improve Skills
+
+                    </h3>
+
+                    <p class="text-gray-400">
+
+                        Practice regularly and improve
+                        your problem-solving skills.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer
+        class="bg-slate-950
+               border-t border-slate-800
+               text-center
+               py-6">
+
+        <p class="text-gray-500">
+            © 2026 EduTech. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Mobile menu
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("mobileMenu");
+
+            menu.classList.toggle("hidden");
+
+        }
+
+
+        // Start Learning button
+
+        function startLearning() {
+
+            document.getElementById("message")
+                .textContent =
+                "Great! Your learning journey has started 🚀";
+
+        }
+
+
+        // Explore Courses button
+
+        function showMessage() {
+
+            document.getElementById("message")
+                .textContent =
+                "Courses will be available soon!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
