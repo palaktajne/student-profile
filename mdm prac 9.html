@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="min-h-screen
+             bg-gradient-to-br
+             from-green-100
+             to-blue-100
+             flex items-center justify-center
+             px-4 py-8">
+
+
+    <!-- Form Card -->
+    <div class="bg-white
+                w-full
+                max-w-md
+                sm:max-w-lg
+                lg:max-w-2xl
+                rounded-2xl
+                shadow-xl
+                p-5 sm:p-8 lg:p-10">
+
+
+        <!-- Heading -->
+        <div class="text-center mb-7">
+
+            <h1 class="text-2xl
+                       sm:text-3xl
+                       lg:text-4xl
+                       font-bold text-green-600">
+
+                Student Registration
+
+            </h1>
+
+            <p class="text-gray-500 text-sm sm:text-base mt-2">
+
+                Enter your details below
+
+            </p>
+
+        </div>
+
+
+        <form id="studentForm">
+
+
+            <!-- Responsive Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+
+                <!-- Name -->
+                <div>
+
+                    <label for="name"
+                           class="block font-semibold mb-2
+                                  text-sm sm:text-base">
+
+                        Student Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                        class="w-full
+                               border border-gray-300
+                               rounded-lg
+                               px-4 py-3
+                               text-sm sm:text-base
+                               focus:outline-none
+                               focus:ring-2
+                               focus:ring-green-500">
+
+                </div>
+
+
+                <!-- Email -->
+                <div>
+
+                    <label for="email"
+                           class="block font-semibold mb-2
+                                  text-sm sm:text-base">
+
+                        Email
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                        class="w-full
+                               border border-gray-300
+                               rounded-lg
+                               px-4 py-3
+                               text-sm sm:text-base
+                               focus:outline-none
+                               focus:ring-2
+                               focus:ring-green-500">
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Gender -->
+            <div class="mt-6">
+
+                <label class="block font-semibold mb-3">
+
+                    Gender
+
+                </label>
+
+
+                <div class="grid
+                            grid-cols-1
+                            sm:grid-cols-3
+                            gap-3">
+
+
+                    <label class="border rounded-lg p-3
+                                  cursor-pointer
+                                  hover:bg-green-50">
+
+                        <input type="radio"
+                               name="gender"
+                               value="Male"
+                               required>
+
+                        <span class="ml-2">Male</span>
+
+                    </label>
+
+
+                    <label class="border rounded-lg p-3
+                                  cursor-pointer
+                                  hover:bg-green-50">
+
+                        <input type="radio"
+                               name="gender"
+                               value="Female">
+
+                        <span class="ml-2">Female</span>
+
+                    </label>
+
+
+                    <label class="border rounded-lg p-3
+                                  cursor-pointer
+                                  hover:bg-green-50">
+
+                        <input type="radio"
+                               name="gender"
+                               value="Other">
+
+                        <span class="ml-2">Other</span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="w-full
+                       mt-7
+                       bg-green-600
+                       hover:bg-green-700
+                       text-white
+                       py-3
+                       rounded-lg
+                       font-semibold
+                       text-sm sm:text-base
+                       transition">
+
+                Register Student
+
+            </button>
+
+
+        </form>
+
+
+        <p id="result"
+           class="text-center
+                  mt-5
+                  text-sm sm:text-base
+                  font-semibold">
+        </p>
+
+
+    </div>
+
+
+    <script>
+
+        document.getElementById("studentForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            document.getElementById("result").innerText =
+                "Registration successful! Welcome " + name + ".";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
